@@ -15,4 +15,9 @@ class World:
             for x in range(self.width):
                 if y < self.height - 5:
                     row.append(BlockType.GRASS) # Top Layers are grass 
-                    
+                elif y < self.height - 1:
+                    row.append(BlockType.DIRT)  # Middle Layers are dirt 
+                else: 
+                    row.append(BlockType.STONE) # Bottom layers are stone
+            self.grid.append(row)
+
