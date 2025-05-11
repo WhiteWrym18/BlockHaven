@@ -1,17 +1,17 @@
-// // src/world.ts
-//export type BlockType = 'grass' | 'dirt' | 'stone';
+// src/world.ts
+export type BlockType = 'grass' | 'dirt' | 'stone';
 
-//export class World {
-   // private grid: BlockType[][];
-    //public readonly width: number;
-    //public readonly height: number;
+export class World {
+    private grid: BlockType[][];
+    public readonly width: number;
+    public readonly height: number;
 
-    //constructor(width: number, height: number) {
-       // this.width = width;
-        //this.height = height;
-        //this.grid = [];
-        //this.generateWorld();
-    //}
+    constructor(width: number, height: number) {
+        this.width = width;
+        this.height = height;
+        this.grid = [];
+        this.generateWorld();
+    }
 
     private generateWorld(): void {
         for (let y = 0; y < this.height; y++) {
