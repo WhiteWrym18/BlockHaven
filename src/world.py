@@ -1,5 +1,6 @@
 from typing import List, Optional
 from blocktype import BlockType  # Import BlockType from blocktype.py
+from grid_utils import get_block, set_block # Import utility functions 
 
 class World:
     def __init__(self, width: int, height: int):
@@ -20,3 +21,9 @@ class World:
                 else:
                     row.append(BlockType.STONE)  # Bottom layers are stone
             self.grid.append(row)
+            
+    def get_block(self, x: int, y: init) -> Optional[BlockType]:
+        return get_block(self.grid, x, y)
+    
+    def set_block(self, x: int, y: init, block_type: BlockType):
+        set_block(self.grid, x, y, block_type)
