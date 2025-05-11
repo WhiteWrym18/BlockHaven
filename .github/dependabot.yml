@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # Monitor Python dependencies in requirements.txt
+  - package-ecosystem: "pip"
+    directory: "/" # Location of the requirements.txt file
+    schedule:
+      interval: "weekly" # Check for updates weekly
+  # Keep GitHub Actions dependencies updated
+  - package-ecosystem: "github-actions"
+    directory: "/" # Location of GitHub Actions workflows
+    schedule:
+      interval: "weekly" # Check for updates weekly
